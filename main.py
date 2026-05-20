@@ -1,13 +1,17 @@
-from fastapi import FastAPI
+from fastapi import APIRouter, FastAPI
 
-from routers.greetings import router as greetings_router
+from routers.convo_starter import router as convo_starter_router
+from routers.greetings import v1
 
 app = FastAPI(
     title="fastapi-learning-tests",
     version="0.1.0",
 )
 
-app.include_router(greetings_router)
+# app.include_router(greetings_router, prefix="/greetings")
+
+app.include_router(v1)
+# app.include_router(convo_starter_router, prefix="/convo-starter")
 
 
 @app.get("/")
