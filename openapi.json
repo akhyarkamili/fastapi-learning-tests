@@ -1,0 +1,103 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "fastapi-learning-tests",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/v1/greetings/hello": {
+      "get": {
+        "tags": [
+          "greetings"
+        ],
+        "summary": "Hello",
+        "operationId": "hello_v1_greetings_hello_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object",
+                  "title": "Response Hello V1 Greetings Hello Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/greetings/hi": {
+      "get": {
+        "tags": [
+          "greetings"
+        ],
+        "summary": "Hi",
+        "operationId": "hi_v1_greetings_hi_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object",
+                  "title": "Response Hi V1 Greetings Hi Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "summary": "Read Root",
+        "operationId": "read_root__get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object",
+                  "title": "Response Read Root  Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object",
+                  "title": "Response Health Health Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
